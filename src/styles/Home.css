@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  padding: 40px 20px;
   color: #e1e1e1;
   background-color: transparent;
   position: relative;
@@ -19,7 +19,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6); /* Dark overlay to reduce image transparency */
-  z-index: -1; /* Ensure overlay stays behind content */
+  z-index: -1;
 }
 
 /* Intro Section with Glass Effect */
@@ -183,4 +183,28 @@
   font-style: italic;
   color: #d4d4d4;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .intro, .key-services, .portfolio-preview, .testimonials {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .intro h1, .key-services h2, .portfolio-preview h2, .testimonials h2 {
+    font-size: 2em;
+  }
+
+  .intro p, .service-item p, .project-info p, .testimonial-item p {
+    font-size: 1em;
+  }
+
+  .services-list, .portfolio-list, .testimonial-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item, .portfolio-item, .testimonial-item {
+    margin-bottom: 20px;
+  }
 }
