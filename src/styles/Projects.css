@@ -111,7 +111,7 @@
   }
 
   .carousel-container {
-    max-width: 10px;
+    max-width: 600px;
     margin-right: 20px;
   }
 
@@ -151,7 +151,7 @@
 
   /* Reduce image height on mobile */
   .slider-image img {
-    max-height: 10px; /* Smaller height for mobile screens */
+    max-height: 10; /* Smaller height for mobile screens */
   }
 }
 
