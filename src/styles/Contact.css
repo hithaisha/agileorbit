@@ -108,3 +108,32 @@
 .contact button:active {
   transform: translateY(0);
 }
+/* src/styles/Contact.css */
+
+@media (max-width: 768px) {
+  .contact h1 {
+    font-size: 2.5em;
+  }
+
+  .contact-intro {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .contact-box {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.5em;
+  }
+
+  .contact-info p {
+    font-size: 1em;
+  }
+
+  .contact button {
+    font-size: 0.9em;
+  }
+}

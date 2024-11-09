@@ -166,3 +166,42 @@
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 144, 255, 0.4);
 }
+/* src/styles/About.css */
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2.5em;
+  }
+
+  .intro p {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mission-vision .card {
+    width: 100%;
+  }
+
+  .values h2 {
+    font-size: 2em;
+  }
+
+  .team h2 {
+    font-size: 2em;
+  }
+
+  .team-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .team-member p {
+    font-size: 0.9em;
+  }
+}
+

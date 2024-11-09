@@ -16,7 +16,7 @@
   text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
 }
 
-/* Glass Effect for Project List */
+/* Project List */
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -29,8 +29,8 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.1); /* Glass effect background */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
@@ -38,18 +38,58 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Desktop Layout */
 @media (min-width: 768px) {
   .project-card {
-    flex-direction: row; /* Side-by-side layout on larger screens */
+    flex-direction: row;
     align-items: center;
+  }
+
+  .carousel-container {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+  }
+
+  .project-info {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .projects h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .carousel-container {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .project-info h3 {
+    font-size: 1.6em;
+  }
+
+  .project-info p {
+    font-size: 1em;
+  }
+
+  .carousel-button {
+    font-size: 1.5em;
   }
 }
 
 /* Carousel Container */
 .carousel-container {
-  flex: 1;
-  max-width: 600px;
-  margin-right: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .project-slider {
@@ -64,12 +104,7 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Project Information with Glass Effect */
-.project-info {
-  flex: 1;
-  text-align: center;
-}
-
+/* Project Information */
 .project-info h3 {
   font-size: 1.8em;
   color: #00eaff;
@@ -83,7 +118,6 @@
   line-height: 1.6;
 }
 
-/* Hover and Shadow Effects for Project Cards */
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 144, 255, 0.4);
