@@ -52,18 +52,18 @@ const Home = () => {
         <div className="portfolio-list">
           <div className="portfolio-item">
             <img src="https://source.unsplash.com/300x200/?technology" alt="Project 1" />
-            <h3>Predictive Analytics</h3>
+            <h3>Fintech Lanka solutions</h3>
             <p>Harnessing data to foresee market trends and optimize outcomes.</p>
           </div>
           <div className="portfolio-item">
             <img src="https://source.unsplash.com/300x200/?city" alt="Project 2" />
-            <h3>Smart City Infrastructure</h3>
-            <p>Supporting the future of connected urban living.</p>
+            <h3>KKG Coco Lanka</h3>
+            <p>Website with Quotes for Coconut exporter in Srilanka</p>
           </div>
           <div className="portfolio-item">
             <img src="https://source.unsplash.com/300x200/?factory" alt="Project 3" />
-            <h3>Automated Factory Solutions</h3>
-            <p>Improving efficiency through intelligent automation.</p>
+            <h3>Invoicing Mobile Application</h3>
+            <p>Mobile Invoicing and Inventory Management Application for both Android and IOS</p>
           </div>
         </div>
       </section>
