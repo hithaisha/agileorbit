@@ -4,16 +4,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 40px 5%;
   color: #e1e1e1;
   background-color: transparent;
 }
 
 .projects h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   color: #00eaff;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+  text-align: center;
 }
 
 /* Project List */
@@ -21,7 +22,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
 }
@@ -38,54 +39,6 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Desktop Layout */
-@media (min-width: 768px) {
-  .project-card {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .carousel-container {
-    flex: 1;
-    max-width: 600px;
-    margin-right: 20px;
-  }
-
-  .project-info {
-    flex: 1;
-    text-align: left;
-  }
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .projects h1 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-  }
-
-  .project-card {
-    padding: 15px;
-  }
-
-  .carousel-container {
-    max-width: 100%;
-    margin-right: 0;
-  }
-
-  .project-info h3 {
-    font-size: 1.6em;
-  }
-
-  .project-info p {
-    font-size: 1em;
-  }
-
-  .carousel-button {
-    font-size: 1.5em;
-  }
-}
-
 /* Carousel Container */
 .carousel-container {
   width: 100%;
@@ -98,6 +51,7 @@
 
 .slider-image img {
   width: 100%;
+  height: auto;
   max-height: 300px;
   object-fit: cover;
   border-radius: 8px;
@@ -105,6 +59,10 @@
 }
 
 /* Project Information */
+.project-info {
+  text-align: center;
+}
+
 .project-info h3 {
   font-size: 1.8em;
   color: #00eaff;
@@ -118,6 +76,7 @@
   line-height: 1.6;
 }
 
+/* Hover and Shadow Effects */
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 144, 255, 0.4);
@@ -130,7 +89,7 @@
   color: #00f2ff;
   font-size: 2em;
   cursor: pointer;
-  padding: 20px;
+  padding: 10px;
   transition: color 0.3s;
 }
 
@@ -140,4 +99,82 @@
 
 .carousel-button:focus {
   outline: none;
+}
+
+/* Responsive Adjustments */
+
+/* Tablet and Larger Screens */
+@media (min-width: 768px) {
+  .project-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .carousel-container {
+    max-width: 10px;
+    margin-right: 20px;
+  }
+
+  .project-info {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .projects h1 {
+    font-size: 2em;
+    margin-bottom: 25px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .carousel-container {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .project-info h3 {
+    font-size: 1.5em;
+  }
+
+  .project-info p {
+    font-size: 1em;
+  }
+
+  .carousel-button {
+    font-size: 1.5em;
+  }
+
+  /* Reduce image height on mobile */
+  .slider-image img {
+    max-height: 10px; /* Smaller height for mobile screens */
+  }
+}
+
+/* Extra Small Screen Adjustments */
+@media (max-width: 480px) {
+  .projects h1 {
+    font-size: 1.8em;
+  }
+
+  .project-info h3 {
+    font-size: 1.3em;
+  }
+
+  .project-info p {
+    font-size: 0.9em;
+  }
+
+  .carousel-button {
+    font-size: 1.2em;
+  }
+
+  /* Further reduce image size on extra small screens */
+  .slider-image img {
+    max-height: 5px;
+  }
 }
