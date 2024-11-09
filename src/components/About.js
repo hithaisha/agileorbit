@@ -31,27 +31,7 @@ const About = () => {
         </ul>
       </section>
 
-      <section className="team">
-        <h2>Meet Our Team</h2>
-        <div className="team-gallery">
-          <div className="team-member">
-            <img src="https://source.unsplash.com/100x100/?portrait,developer" alt="Team Member 1" />
-            <p>Heshan Karunaratne</p>
-          </div>
-          <div className="team-member">
-            <img src="https://source.unsplash.com/100x100/?portrait,technology" alt="Team Member 2" />
-            <p>Kavindya Baddegama</p>
-          </div>
-          <div className="team-member">
-            <img src="https://source.unsplash.com/100x100/?portrait,engineer" alt="Team Member 3" />
-            <p>Gagana Abeywickrama</p>
-          </div>
-          <div className="team-member">
-            <img src="https://source.unsplash.com/100x100/?portrait,designer" alt="Team Member 4" />
-            <p>Hithaisha Perera</p>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 };
