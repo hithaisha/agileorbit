@@ -1,0 +1,168 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  color: #e1e1e1;
+  background-color: transparent;
+}
+
+/* Intro Section with Glass Effect */
+.intro {
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.intro h1 {
+  font-size: 3em;
+  color: #00eaff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+.intro p {
+  font-size: 1.2em;
+  color: #dcdcdc;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mission & Vision Section with Glass Effect */
+.mission-vision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mission-vision .card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 40%;
+  box-shadow: 0 4px 12px rgba(0, 144, 255, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mission-vision .card h2 {
+  font-size: 2em;
+  color: #00d4ff;
+  margin-bottom: 15px;
+}
+
+.mission-vision .card p {
+  font-size: 1.1em;
+  color: #cfcfcf;
+  line-height: 1.5;
+}
+
+.mission-vision .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 144, 255, 0.5);
+}
+
+/* Values Section with Glass Effect */
+.values {
+  width: 100%;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.values h2 {
+  font-size: 2.4em;
+  color: #00d4ff;
+  margin-bottom: 30px;
+}
+
+.value-list {
+  list-style: none;
+  max-width: 800px;
+  margin: auto;
+  padding: 0;
+  color: #d4d4d4;
+}
+
+.value-list li {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #d4d4d4;
+}
+
+.value-list li strong {
+  color: #00eaff;
+}
+
+/* Team Section with Glass Effect */
+.team {
+  width: 100%;
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.team h2 {
+  font-size: 2.4em;
+  color: #00d4ff;
+  margin-bottom: 30px;
+}
+
+.team-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.team-member {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-member img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #00d4ff;
+}
+
+.team-member p {
+  font-size: 1.1em;
+  color: #dcdcdc;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 144, 255, 0.4);
+}
