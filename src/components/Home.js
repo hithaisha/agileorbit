@@ -9,6 +9,7 @@ import flutter from '../assets/icons/flutter.png';
 import react from '../assets/icons/react.png';
 import net from '../assets/icons/net.png';
 import java from '../assets/icons/java.webp';
+import angular from '../assets/icons/angular.png';
 
 const Home = () => {
   return (
@@ -73,6 +74,10 @@ const Home = () => {
           <div className="tech-item">
             <img src={azure} alt="Azure" />
             <p>Azure</p>
+          </div>
+          <div className="tech-item">
+            <img src={angular} alt="Azure"/>
+            <p>Angular</p>
           </div>
         </div>
       </section>
