@@ -2,83 +2,77 @@
 import React from 'react';
 import '../styles/Home.css';
 
-// Import images from the local assets folder
-import cloudIcon from '../assets/icons/cloud.png';
-import aiIcon from '../assets/icons/ai.png';
-import dataIcon from '../assets/icons/data.png';
-import securityIcon from '../assets/icons/security.png';
+// Importing technology images
+import aws from '../assets/icons/aws.png';
+import azure from '../assets/icons/azure.png';
+import flutter from '../assets/icons/flutter.png';
+import react from '../assets/icons/react.png';
+import net from '../assets/icons/net.png';
+import java from '../assets/icons/java.webp';
 
 const Home = () => {
   return (
     <div className="home">
-      {/* Intro Section */}
-      <section className="intro">
-        <h1>Welcome to Agile Orbit</h1>
-        <p>
-          Agile Orbit offers transformative software solutions crafted for high-performance industries. From cloud technology to AI, we propel your operations into the future.
-        </p>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Experience the Future of Technology</h1>
+          <p>At Agile Orbit, we create solutions that empower businesses and inspire innovation.</p>
+          <button className="cta-button">Discover More</button>
+        </div>
       </section>
 
-      {/* Key Services Section */}
-      <section className="key-services">
-        <h2>Our Stellar Services</h2>
+      {/* Services Section */}
+      <section className="services">
+        <h2>Our Services</h2>
         <div className="services-list">
           <div className="service-item">
-            <img src={cloudIcon} alt="Cloud Solutions" />
+            <h3>Custom Software Development</h3>
+            <p>Creating tailored solutions that drive your business forward.</p>
+          </div>
+          <div className="service-item">
             <h3>Cloud Solutions</h3>
-            <p>Reliable, scalable cloud infrastructure built for any environment.</p>
+            <p>Scalable, secure cloud solutions for modern enterprises.</p>
           </div>
           <div className="service-item">
-            <img src={aiIcon} alt="AI & Machine Learning" />
-            <h3>AI Integration</h3>
-            <p>Intelligent, adaptive solutions powered by advanced AI algorithms.</p>
+            <h3>Data Analytics & AI</h3>
+            <p>Unlock actionable insights with advanced analytics.</p>
           </div>
           <div className="service-item">
-            <img src={dataIcon} alt="Data Analytics" />
-            <h3>Data Analytics</h3>
-            <p>Data insights for informed decision-making and business growth.</p>
-          </div>
-          <div className="service-item">
-            <img src={securityIcon} alt="Cybersecurity" />
             <h3>Cybersecurity</h3>
-            <p>End-to-end security that evolves with the latest threats.</p>
+            <p>Comprehensive security strategies to safeguard your data.</p>
           </div>
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section className="portfolio-preview">
-        <h2>Projects in Orbit</h2>
-        <div className="portfolio-list">
-          <div className="portfolio-item">
-            <img src="https://source.unsplash.com/300x200/?technology" alt="Project 1" />
-            <h3>Fintech Lanka solutions</h3>
-            <p>Harnessing data to foresee market trends and optimize outcomes.</p>
+      {/* Technologies Section */}
+      <section className="technologies">
+        <h2>Technologies We Use</h2>
+        <p>We leverage cutting-edge tools to deliver innovative solutions:</p>
+        <div className="tech-grid">
+          <div className="tech-item">
+            <img src={aws} alt="AWS" />
+            <p>AWS</p>
           </div>
-          <div className="portfolio-item">
-            <img src="https://source.unsplash.com/300x200/?city" alt="Project 2" />
-            <h3>KKG Coco Lanka</h3>
-            <p>Website with Quotes for Coconut exporter in Srilanka</p>
+          <div className="tech-item">
+            <img src={react} alt="React" />
+            <p>React</p>
           </div>
-          <div className="portfolio-item">
-            <img src="https://source.unsplash.com/300x200/?factory" alt="Project 3" />
-            <h3>Invoicing Mobile Application</h3>
-            <p>Mobile Invoicing and Inventory Management Application for both Android and IOS</p>
+          <div className="tech-item">
+            <img src={java} alt="Java" />
+            <p>Java</p>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="testimonials">
-        <h2>Client Experiences</h2>
-        <div className="testimonial-list">
-          <div className="testimonial-item">
-            <p>"Agile Orbit has completely revolutionized our workflow."</p>
-            <h4>- Chris Green, CTO at FutureTech</h4>
+          <div className="tech-item">
+            <img src={flutter} alt="flutter" />
+            <p>Flutter</p>
           </div>
-          <div className="testimonial-item">
-            <p>"Their expertise in AI is unmatched. Highly recommended."</p>
-            <h4>- Sarah Lee, CEO at DataNow</h4>
+          <div className="tech-item">
+            <img src={net} alt=".net" />
+            <p>.Net</p>
+          </div>
+          <div className="tech-item">
+            <img src={azure} alt="Azure" />
+            <p>Azure</p>
           </div>
         </div>
       </section>

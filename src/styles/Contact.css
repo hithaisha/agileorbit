@@ -1,42 +1,59 @@
 /* src/styles/Contact.css */
 
+:root {
+  --primary-color: #000;
+  --accent-color: #0071e3; /* Apple's blue accent */
+  --light-gray: #f2f2f2;
+  --text-light: #555;
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --blur-effect: 15px;
+  --border-radius: 12px;
+}
+
+body, html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--primary-color);
+  background-color: var(--light-gray);
+  margin: 0;
+  padding: 0;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
-  color: #ffffff;
-  background-color: transparent;
+  padding: 60px 20px;
   min-height: 100vh;
 }
 
 .contact h1 {
   font-size: 3em;
-  color: #ffffff;
+  font-weight: 600;
+  color: var(--primary-color);
   margin-bottom: 15px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .contact-intro {
   font-size: 1.2em;
-  color: #ffffff;
+  color: var(--text-light);
   max-width: 800px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  line-height: 1.6;
 }
 
-/* Glass Effect Box */
+/* Glassmorphic Contact Box */
 .contact-box {
   width: 90%;
   max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 40px;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-effect));
+  border-radius: var(--border-radius);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -46,78 +63,78 @@
   }
 }
 
+/* Contact Info */
 .contact-info h2 {
   font-size: 2em;
-  color: #ffffff;
+  color: var(--primary-color);
   margin-bottom: 20px;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 .contact-info p {
   font-size: 1.1em;
-  color: #ffffff;
-  line-height: 1.5;
-  margin-bottom: 10px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-.contact input, .contact textarea {
-  padding: 12px;
-  border: 1px solid #555;
-  border-radius: 5px;
+.contact-form input, .contact-form textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
   transition: border 0.3s ease;
 }
 
-.contact input::placeholder,
-.contact textarea::placeholder {
-  color: #dcdcdc;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
 }
 
-.contact input:focus, .contact textarea:focus {
+.contact-form input:focus, .contact-form textarea:focus {
   outline: none;
-  border-color: #00eaff;
-  box-shadow: 0 0 8px rgba(0, 234, 255, 0.5);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(0, 113, 227, 0.3);
 }
 
-/* Updated Button Style */
+/* Button Styling */
 .contact button {
-  padding: 12px;
+  padding: 15px;
   font-size: 1em;
-  color: #ffffff; /* Set to white */
-  background-color: #00eaff;
+  color: #ffffff;
+  background-color: var(--accent-color);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact button:hover {
-  background-color: #00c2cc;
-  transform: translateY(-3px);
+  background-color: #005bb5;
+  transform: translateY(-2px);
 }
 
 .contact button:active {
   transform: translateY(0);
 }
-/* src/styles/Contact.css */
 
+/* Responsive Styling */
 @media (max-width: 768px) {
   .contact h1 {
     font-size: 2.5em;
   }
 
   .contact-intro {
-    font-size: 1em;
-    padding: 0 10px;
+    font-size: 1.1em;
+    padding: 0 15px;
   }
 
   .contact-box {
@@ -126,7 +143,7 @@
   }
 
   .contact-info h2 {
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
 
   .contact-info p {

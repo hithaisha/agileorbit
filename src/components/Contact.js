@@ -2,8 +2,8 @@
 import React, { useRef, useState } from 'react';
 import { db } from '../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
-import '../styles/Contact.css';
 import emailjs from 'emailjs-com';
+import '../styles/Contact.css';
 
 const Contact = () => {
   const form = useRef();
@@ -13,23 +13,15 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       await addDoc(collection(db, 'contacts'), { name, email, message });
-      
-      emailjs.sendForm(
+      await emailjs.sendForm(
         'service_5t0bt18',
         'template_zyb6x02',
         form.current,
         'L1ntqiB-hFY3DGBb8'
-      )
-      .then(() => {
-        alert('Message sent successfully!');
-      })
-      .catch((error) => {
-        alert('Failed to send email: ' + error.text);
-      });
-
+      );
+      alert('Message sent successfully!');
       setName('');
       setEmail('');
       setMessage('');
@@ -42,14 +34,14 @@ const Contact = () => {
     <div className="contact">
       <h1>Contact Us</h1>
       <p className="contact-intro">
-        Reach out to Agile Orbit! We're here to answer questions, discuss your projects, and assist with our software solutions.
+        We’re here to discuss your project needs and help you explore new solutions. Reach out to Agile Orbit to start the conversation.
       </p>
       
       <div className="contact-box">
         <div className="contact-info">
           <h2>Contact Information</h2>
-          <p><strong>Address:</strong> 95A, Rajamawatha Road,Ratmalana, 10370</p>
-          <p><strong>Phone:</strong>+94 (77) 203 8815</p>
+          <p><strong>Address:</strong> 95A, Rajamawatha Road, Ratmalana, 10370</p>
+          <p><strong>Phone:</strong> +94 (77) 203 8815</p>
           <p><strong>Email:</strong> info@agileorbit.com</p>
         </div>
 
