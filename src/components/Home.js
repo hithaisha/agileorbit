@@ -1,5 +1,5 @@
-// src/components/Home.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 
 // Importing technology images
@@ -8,7 +8,6 @@ import azure from '../assets/icons/azure.png';
 import flutter from '../assets/icons/flutter.png';
 import react from '../assets/icons/react.png';
 import net from '../assets/icons/net.png';
-// import java from '../assets/icons/java.webp';
 import angular from '../assets/icons/angular.png';
 import oracle from '../assets/icons/oracle.png';
 
@@ -20,7 +19,9 @@ const Home = () => {
         <div className="hero-content">
           <h1>Experience the Future of Technology</h1>
           <p>At Agile Orbit, we create solutions that empower businesses and inspire innovation.</p>
-          <button className="cta-button">Discover More</button>
+          <Link to="/about">
+            <button className="cta-button">Discover More</button>
+          </Link>
         </div>
       </section>
 
@@ -60,10 +61,6 @@ const Home = () => {
             <img src={react} alt="React" />
             <p>React</p>
           </div>
-          {/* <div className="tech-item">
-            <img src={java} alt="Java" />
-            <p>Java</p>
-          </div> */}
           <div className="tech-item">
             <img src={flutter} alt="flutter" />
             <p>Flutter</p>
