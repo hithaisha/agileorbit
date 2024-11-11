@@ -42,7 +42,7 @@ const Contact = () => {
           <h2>Contact Information</h2>
           <p><strong>Address:</strong> 95A, Rajamawatha Road, Ratmalana, 10370</p>
           <p><strong>Phone:</strong> +94 (77) 203 8815</p>
-          <p><strong>Email:</strong> info@agileorbit.com</p>
+          <p><strong>Email:</strong> agileorbits@gmail.com</p>
         </div>
 
         <form ref={form} onSubmit={handleSubmit} className="contact-form">
