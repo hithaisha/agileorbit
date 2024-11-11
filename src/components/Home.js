@@ -14,9 +14,8 @@ import oracle from '../assets/icons/oracle.png';
 const Home = () => {
   return (
     <div className="home">
-      {/* Hero Section */}
       <section className="hero">
-        <div className="hero-content">
+        <div className="hero-content glass">
           <h1>Experience the Future of Technology</h1>
           <p>At Agile Orbit, we create solutions that empower businesses and inspire innovation.</p>
           <Link to="/about">
@@ -25,30 +24,32 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="services">
         <h2>Our Services</h2>
         <div className="services-list">
-          <div className="service-item">
+          <div className="service-item" style={{ '--delay-index': 1 }}>
             <h3>Custom Software Development</h3>
             <p>Creating tailored solutions that drive your business forward.</p>
           </div>
-          <div className="service-item">
+          <div className="service-item" style={{ '--delay-index': 2 }}>
             <h3>Cloud Solutions</h3>
             <p>Scalable, secure cloud solutions for modern enterprises.</p>
           </div>
-          <div className="service-item">
-            <h3>Data Analytics & AI</h3>
-            <p>Unlock actionable insights with advanced analytics.</p>
+          <div className="service-item" style={{ '--delay-index': 3 }}>
+            <h3>Mobile Application Development</h3>
+            <p>Build engaging and intuitive mobile experiences across platforms to reach your customers anytime, anywhere.</p>
           </div>
-          <div className="service-item">
-            <h3>Cybersecurity</h3>
-            <p>Comprehensive security strategies to safeguard your data.</p>
+          <div className="service-item" style={{ '--delay-index': 4 }}>
+            <h3>ERP Solutions</h3>
+            <p>Streamline business processes and integrate various functions with robust ERP solutions tailored to your needs.</p>
+          </div>
+          <div className="service-item" style={{ '--delay-index': 5 }}>
+            <h3>Web Development</h3>
+            <p>Design and develop responsive websites and web applications that deliver exceptional user experiences.</p>
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
       <section className="technologies">
         <h2>Technologies We Use</h2>
         <p>We leverage cutting-edge tools to deliver innovative solutions:</p>
@@ -62,11 +63,11 @@ const Home = () => {
             <p>React</p>
           </div>
           <div className="tech-item">
-            <img src={flutter} alt="flutter" />
+            <img src={flutter} alt="Flutter" />
             <p>Flutter</p>
           </div>
           <div className="tech-item">
-            <img src={net} alt=".net" />
+            <img src={net} alt=".Net" />
             <p>.Net</p>
           </div>
           <div className="tech-item">
@@ -74,11 +75,11 @@ const Home = () => {
             <p>Azure</p>
           </div>
           <div className="tech-item">
-            <img src={angular} alt="Azure"/>
+            <img src={angular} alt="Angular" />
             <p>Angular</p>
           </div>
           <div className="tech-item">
-            <img src={oracle} alt="Oracle"/>
+            <img src={oracle} alt="Oracle" />
             <p>Oracle</p>
           </div>
         </div>

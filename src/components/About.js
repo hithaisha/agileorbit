@@ -1,4 +1,3 @@
-// src/components/About.js
 import React from 'react';
 import '../styles/About.css';
 
@@ -7,17 +6,17 @@ const About = () => {
     <div className="about">
       {/* Introduction Section */}
       <section className="intro">
-        <h1>About FutureDev</h1>
+        <h1>About Agile Orbit</h1>
         <p>Redefining digital experiences and empowering industries with innovative, high-performance software solutions.</p>
       </section>
 
       {/* Mission & Vision Section */}
       <section className="mission-vision">
-        <div className="card mission">
+        <div className="card mission" style={{ '--delay-index': 1 }}>
           <h2>Our Mission</h2>
           <p>To deliver scalable, high-quality software solutions that streamline processes and enhance user experiences across industries.</p>
         </div>
-        <div className="card vision">
+        <div className="card vision" style={{ '--delay-index': 2 }}>
           <h2>Our Vision</h2>
           <p>To be at the forefront of digital transformation, empowering organizations to reach their full potential through cutting-edge technology.</p>
         </div>
@@ -38,7 +37,7 @@ const About = () => {
       {/* Success Stories Section */}
       <section className="success-stories">
         <h2>Client Success Stories</h2>
-        <p>FutureDev has partnered with organizations across sectors to create impactful digital solutions. From enhancing customer engagement for retail brands to developing secure platforms for fintech, our projects reflect our commitment to excellence and client satisfaction.</p>
+        <p>Agile Orbit has partnered with organizations across sectors to create impactful digital solutions. From enhancing customer engagement for retail brands to developing secure platforms for fintech, our projects reflect our commitment to excellence and client satisfaction.</p>
       </section>
     </div>
   );

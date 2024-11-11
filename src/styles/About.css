@@ -1,10 +1,8 @@
-/* src/styles/About.css */
-
 :root {
-  --primary-color: #000; /* Black for primary text */
-  --secondary-color: #fff; /* White for backgrounds */
-  --highlight-color: #0071e3; /* Apple’s signature blue */
-  --text-light-color: #555; /* Light text color for descriptions */
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --highlight-color: #0071e3;
+  --text-light-color: #555;
 }
 
 body, html {
@@ -22,12 +20,25 @@ body, html {
   padding: 60px 20px;
 }
 
+/* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Intro Section */
 .intro {
   width: 80%;
   max-width: 800px;
   text-align: center;
   padding: 60px 0;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .intro h1 {
@@ -43,7 +54,7 @@ body, html {
   line-height: 1.6;
 }
 
-/* Mission & Vision Section */
+/* Mission & Vision Section with staggered fade-in */
 .mission-vision {
   display: flex;
   justify-content: space-between;
@@ -59,135 +70,17 @@ body, html {
   max-width: 450px;
   padding: 40px;
   text-align: center;
+  background: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: calc(var(--delay-index) * 0.2s);
+  transition: box-shadow 0.3s ease;
 }
 
-.mission-vision h2 {
-  font-size: 2em;
-  color: var(--primary-color);
-}
-
-.mission-vision p {
-  font-size: 1.2em;
-  color: var(--text-light-color);
-  line-height: 1.6;
-}
-
-/* Values Section */
-.values {
-  width: 80%;
-  max-width: 800px;
-  margin-top: 60px;
-  text-align: center;
-}
-
-.values h2 {
-  font-size: 2.5em;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 30px;
-}
-
-.value-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  color: var(--text-light-color);
-}
-
-.value-list li {
-  font-size: 1.3em;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.value-list li strong {
-  color: var(--highlight-color);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .intro h1 {
-    font-size: 2.8em;
-  }
-
-  .intro p {
-    font-size: 1.1em;
-  }
-
-  .mission-vision {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .values h2 {
-    font-size: 2.2em;
-  }
-
-  .value-list li {
-    font-size: 1.1em;
-  }
-}
-/* src/styles/About.css */
-
-:root {
-  --primary-color: #000; /* Black for primary text */
-  --secondary-color: #fff; /* White for backgrounds */
-  --highlight-color: #0071e3; /* Signature accent color */
-  --text-light-color: #555; /* Light text color for descriptions */
-}
-
-body, html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  margin: 0;
-  padding: 0;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 20px;
-}
-
-/* Intro Section */
-.intro {
-  width: 80%;
-  max-width: 800px;
-  text-align: center;
-  padding: 60px 0;
-}
-
-.intro h1 {
-  font-size: 3.5em;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-}
-
-.intro p {
-  font-size: 1.4em;
-  color: var(--text-light-color);
-  line-height: 1.6;
-}
-
-/* Mission & Vision Section */
-.mission-vision {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  width: 80%;
-  max-width: 1000px;
-  margin-top: 60px;
-}
-
-.card {
-  width: 100%;
-  max-width: 450px;
-  padding: 40px;
-  text-align: center;
+.card:hover {
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .mission-vision h2 {
@@ -207,6 +100,7 @@ body, html {
   max-width: 800px;
   margin-top: 60px;
   text-align: center;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .expertise h2 {
@@ -228,6 +122,7 @@ body, html {
   max-width: 800px;
   margin-top: 60px;
   text-align: center;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .approach h2 {
@@ -249,6 +144,7 @@ body, html {
   max-width: 800px;
   margin-top: 60px;
   text-align: center;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .success-stories h2 {

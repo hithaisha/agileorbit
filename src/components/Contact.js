@@ -1,4 +1,3 @@
-// src/components/Contact.js
 import React, { useRef, useState } from 'react';
 import { db } from '../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';

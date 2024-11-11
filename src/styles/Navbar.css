@@ -1,72 +1,27 @@
-/* src/styles/Navbar.css */
-
 :root {
-  --primary-color: rgba(255, 255, 255, 0.85);
+  --primary-color: rgba(255, 255, 255, 0.9);
   --secondary-color: #ffffff;
-  --background-color: rgba(150, 150, 150, 0.8);
-  --highlight-color: #ffffff;
-  --link-hover-color: #185582;
-  --divider-color: #185582;
-  --blur-effect: 90px;
+  --background-color: rgba(255, 255, 255, 0.15); /* Glassy look */
+  --highlight-color: #333333;
+  --link-hover-color: #0071e3;
+  --divider-color: rgba(200, 200, 200, 0.6);
+  --blur-effect: 20px;
+  --scroll-bg-color: rgba(255, 255, 255, 0.85);
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 15px 60px;
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.02),
-      rgba(98, 98, 98, 0.15)
-    ),
-    var(--background-color);
-  backdrop-filter: blur(var(--blur-effect));
-  border-radius: 15px;
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5), 0px 4px 10px var(--highlight-color);
-  position: sticky;
-  top: 20px;
-  z-index: 1000;
-  margin: 20px auto;
-  max-width: 85%;
-  transition: all 0.3s ease;
+/* Slide-down animation for the navbar */
+@keyframes slideDownFadeIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.logo-image {
-  height: 50px;
-  width: auto;
-  filter: drop-shadow(0 0 8px var(--highlight-color));
-  transition: transform 0.3s ease;
-}
-
-.logo-image:hover {
-  transform: scale(1.1);
-}
-
-.navbar-logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #185582;
-  /* color: var(--primary-color); */
-  text-shadow: 0px 0px 6px var(--highlight-color);
-  transition: color 0.3s ease;
-}
-
-
-.divider {
-  height: 40px;
-  width: 2px;
-  background-color: var(--divider-color);
-  margin: 0 30px;
-  animation: pulse 2s infinite alternate;
-  box-shadow: 0px 0px 8px var(--divider-color);
-}
-
+/* Subtle pulse animation for the divider */
 @keyframes pulse {
   0% {
     opacity: 0.5;
@@ -76,44 +31,105 @@
   }
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 60px;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.6)
+    ),
+    var(--background-color);
+  backdrop-filter: blur(var(--blur-effect));
+  border-radius: 15px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05), 0px 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  margin: 20px auto;
+  max-width: 85%;
+  transition: all 0.3s ease;
+  animation: slideDownFadeIn 0.8s ease forwards;
+}
+
+/* Scrolled Navbar - Shrinks and changes background */
+.navbar.scrolled {
+  padding: 10px 50px;
+  background: var(--scroll-bg-color);
+  border-radius: 10px;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Logo styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.08);
+}
+
+.navbar-logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--highlight-color);
+  transition: color 0.3s ease;
+}
+
+/* Divider with subtle pulse effect */
+.divider {
+  height: 30px;
+  width: 1.5px;
+  background-color: var(--divider-color);
+  margin: 0 30px;
+  opacity: 0.7;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Navbar links with subtle underline hover effect */
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 30px;
 }
 
 .navbar-links a {
-  color: var(--secondary-color);
+  color: var(--highlight-color);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1em;
   position: relative;
-  padding: 10px 0;
-  transition: color 0.4s ease, transform 0.4s ease;
-  overflow: hidden;
+  padding: 8px 0;
+  transition: color 0.3s ease;
 }
 
-
-.navbar-links a::before {
+/* Underline effect that appears from left to right on hover */
+.navbar-links a::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
-  width: 100%;
+  left: 0;
+  width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #72e3ff, #185582);
-  box-shadow: 0px 0px 10px var(--link-hover-color);
-  transform: translateX(-50%) scaleX(0);
-  transition: transform 0.4s ease;
+  background: var(--link-hover-color);
+  transition: width 0.3s ease;
 }
 
-.navbar-links a:hover::before {
-  transform: translateX(-50%) scaleX(1);
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 .navbar-links a:hover {
   color: var(--link-hover-color);
-  transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
