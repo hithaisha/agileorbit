@@ -66,10 +66,6 @@ const Home = () => {
             <p>React</p>
           </div>
           <div className="tech-item">
-            <img src={flutter} alt="Flutter" />
-            <p>Flutter</p>
-          </div>
-          <div className="tech-item">
             <img src={angular} alt="Angular" />
             <p>Angular</p>
           </div>
@@ -78,8 +74,8 @@ const Home = () => {
             <p>Springboot</p>
           </div>
           <div className="tech-item">
-            <img src={reactnative} alt="react native" />
-            <p>React Native</p>
+            <img src={flutter} alt="Flutter" />
+            <p>Flutter</p>
           </div>
           <div className="tech-item">
             <img src={net} alt=".Net" />
