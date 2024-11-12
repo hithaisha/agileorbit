@@ -10,6 +10,13 @@ import react from '../assets/icons/react.png';
 import net from '../assets/icons/net.png';
 import angular from '../assets/icons/angular.png';
 import oracle from '../assets/icons/oracle.png';
+import java from '../assets/icons/java.webp';
+import mysql from '../assets/icons/mysql.png';
+import springboot from '../assets/icons/springboot.png';
+import reactnative from '../assets/icons/reactnative.png';
+import mssql from '../assets/icons/mssql.png';
+import googlecloud from '../assets/icons/googlecloud.png';
+
 
 const Home = () => {
   return (
@@ -55,10 +62,6 @@ const Home = () => {
         <p>We leverage cutting-edge tools to deliver innovative solutions:</p>
         <div className="tech-grid">
           <div className="tech-item">
-            <img src={aws} alt="AWS" />
-            <p>AWS</p>
-          </div>
-          <div className="tech-item">
             <img src={react} alt="React" />
             <p>React</p>
           </div>
@@ -67,20 +70,48 @@ const Home = () => {
             <p>Flutter</p>
           </div>
           <div className="tech-item">
-            <img src={net} alt=".Net" />
-            <p>.Net</p>
-          </div>
-          <div className="tech-item">
-            <img src={azure} alt="Azure" />
-            <p>Azure</p>
-          </div>
-          <div className="tech-item">
             <img src={angular} alt="Angular" />
             <p>Angular</p>
           </div>
           <div className="tech-item">
+            <img src={springboot} alt="Sprintboot" />
+            <p>Springboot</p>
+          </div>
+          <div className="tech-item">
+            <img src={reactnative} alt="react native" />
+            <p>React Native</p>
+          </div>
+          <div className="tech-item">
+            <img src={net} alt=".Net" />
+            <p>.Net</p>
+          </div>
+          <div className="tech-item">
+            <img src={java} alt="Java" />
+            <p>Java</p>
+          </div>
+          <div className="tech-item">
+            <img src={mssql} alt="mssql" />
+            <p>MS Sql</p>
+          </div>
+          <div className="tech-item">
+            <img src={mysql} alt="mysql" />
+            <p>My Sql</p>
+          </div>
+          <div className="tech-item">
+            <img src={googlecloud} alt="googlecloud" />
+            <p>Google Cloud</p>
+          </div>
+          <div className="tech-item">
+            <img src={aws} alt="AWS" />
+            <p>AWS</p>
+          </div>
+          <div className="tech-item">
             <img src={oracle} alt="Oracle" />
             <p>Oracle</p>
+          </div>
+          <div className="tech-item">
+            <img src={azure} alt="Azure" />
+            <p>Azure</p>
           </div>
         </div>
       </section>
